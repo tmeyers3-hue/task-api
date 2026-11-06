@@ -27,6 +27,14 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Task"
+      parameters:
+        - name: completed
+          in: query
+          required: false
+          description: Filter tasks by completion status
+          schema:
+            type: boolean
+            example: False
     post:
       summary: Create a new task
       tags:
